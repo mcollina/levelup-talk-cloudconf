@@ -3,7 +3,7 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title How to Cook a Graph Database in a Night
+    title Build your own database with LevelDB and Node.js
 
     link(rel="icon", type="image/png", href="/images/favicon.png")
     link(rel="apple-touch-icon", type="image/png" href="/images/default-apple-touch-icon.png")
@@ -20,93 +20,74 @@ html
     article
 
       section
-        a(href="https://github.com/mcollina/levelgraph-talk-nodejsconfit")
+        a(href="https://github.com/mcollina/levelup-talk-cloudconf")
           img(style="position: absolute; top: 0; right: 0; border: 0;", src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png")
-        h1 How to Cook a Graph Database in a Night
+        h1 Build your own database with LevelDB and Node.js
         h3 <a href="http://twitter.com/matteocollina">@matteocollina</a>
+        img(src="/images/logo.svg")
 
-      section
-        h2 What is a Graph Database?
-
-      section
-        h3(style="text-align: left; width: 500px")
-          i(style="float: left; padding-right: 20px").fa.fa-quote-left.fa-2x
-          | a graph database is any storage system that provides index-free adjacency
-          br
-        h3
-          em Anonymous Wikipedian
-
-      section.full-imgs
-        h2 Models and Relationships
-        br
-        br
-        br
-        table
-          thead
-            tr
-              th Model
-              th Example
-              th Fast for Relationships
-          tbody
-            tr
-              td Documental
-              td MongoDB
-              td(style="background-color: red")
-            tr
-              td Relational
-              td MySQL
-              td(style="background-color: yellow")
-            tr
-              td Graph
-              td OrientDB
-              td(style="background-color: green")
-
-        // A graph database is <em>fast</em> at traversing relations.
-
-      section.full-imgs
-        h2 The smallest possible graph
-        br
-        br
-        div
-          div(style="width: 40%; float: right; display: inline-block;")
-            ul.bullet
-              li(data-bespoke-bullet) "A" is called <em>subject</em>
-              li(data-bespoke-bullet) "B" is called <em>object</em>
-              li(data-bespoke-bullet) "A" and "B" are also called <em>vertexes</em>
-              li(data-bespoke-bullet) "C" is called <em>predicate</em>
-              li(data-bespoke-bullet) "C" is also called <em>arc</em>
-          div(style="width: 70%; display: inline-block; float: left; margin-left: -10%;")
-            img(src="/images/basic_graph.png")
-
-      section.full-imgs
-        h2 Query Examples
-        br
-        br
-        div
-          div(style="width: 40%; float: right; display: inline-block;")
-            ul.bullet
-              li(data-bespoke-bullet) Give me all the vertex that go from "A"
-              li(data-bespoke-bullet) Give me all the pairs connected by "C"
-              li(data-bespoke-bullet) Give me all the vertex that go to "B"
-              li(data-bespoke-bullet) Give me all the vertex that go to "B" <em>through "C"</em>
-              li(data-bespoke-bullet) ...
-          div(style="width: 70%; display: inline-block; float: left; margin-left: -10%;")
-            img(src="/images/basic_graph.png")
-
-      section.full-imgs
-        h2 Hexastore: the fastest data structure for a Graph
-        img(src="/images/hexastore.png")
+      section(data-bespoke-state='consultant')
+        h2 Any problems with your database?
         .copyright
-          a(href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.140.8776&rep=rep1&type=pdf")
-            | Weiss et al.,
-            em "Hexastore: Sextuple Indexing for Semantic Web Data Management"
+          a(href="http://500px.com/photo/22823315", style="color: white") http://500px.com/photo/22823315&nbsp;
+          a(href="http://creativecommons.org/licenses/by/3.0/deed.en_US")
+            img(src="/images/cc_attribution.png")
+
+      section(data-bespoke-state='consultant')
+        h2 Call your consultant!
+
+      section(data-bespoke-state='history')
+        h3 This is not a database ;)
+
+      section(data-bespoke-state='history').blackbg
+        h2 History Pills
+        ul
+         li(data-bespoke-bullet) 1960s: From tapes and batch to disks, shared access and interactivity
+         li(data-bespoke-bullet) Late 1960s: Navigational Databases, links
+         li(data-bespoke-bullet) Early 1970s: Relational Model
+         li(data-bespoke-bullet) Late 1970s: SQL
+         li(data-bespoke-bullet) Early 1980s: Desktop Databases
+         li(data-bespoke-bullet) Late 1980s: Object Oriented Database
+         li(data-bespoke-bullet) 2000s: speed and scale, NoSQL
+         li(data-bespoke-bullet) Early 2010s: never let a beautiful abstraction go to waste, NewSQL
+
+      section(data-bespoke-state='tirant')
+        h3 The tiranny of beautiful abstractions
+
+      section
+        h2 What is a database?
+        h3
+          | A database is a tool for interacting with structured
+          | data, externalized from the core of our application
+
+      section
+        h2 What we need from a database?
+        ul
+          li(data-bespoke-bullet) persistence
+          li(data-bespoke-bullet) performance
+          li(data-bespoke-bullet) simpliciy to access complex data
+          li(data-bespoke-bullet)
+            em sometimes&nbsp;
+            | shared access
+          li(data-bespoke-bullet)
+            em sometimes&nbsp;
+            | scalability
 
       section(data-bespoke-state='cooking')
-        h2 My Secret Ingredient for a Graph Database
+        h2 My Secret Ingredients for a Database
         .copyright
           a(href="http://500px.com/photo/52159764", style="color: white") http://500px.com/photo/52159764 &nbsp;
           a(href="http://creativecommons.org/licenses/by/3.0/deed.en_US")
             img(src="/images/cc_attribution.png")
+
+      section(data-bespoke-state='cooking')
+        img(src="/images/node.png")
+        br
+        img(src="/images/npm.png")
+        ul
+          li Small core, vibrant community
+          li Extreme modularity
+          li Reimplement everything in Javascript
 
       section(data-bespoke-state='cooking')
         h2 LevelUp!
@@ -143,6 +124,12 @@ html
               li(data-bespoke-bullet) ordered iterator
           div(style="width: 50%; display: inline-block; float: left;")
             img(src="/images/example_leveldb.png")
+
+      section
+        h2 LevelUp
+        h3
+          | The Node.js binding for LevelDB,
+          | let's build our database in Javascript!
 
       section
         h2 LevelUp
@@ -280,6 +267,86 @@ html
       section.committers
         h2 LevelUp's Committers
         include includes/committers.html
+
+      section
+        h2 You can use LevelUp to build the database YOU want
+        h3 I built a graph database!
+
+      section
+        h2 What is a Graph Database?
+
+      section
+        h3(style="text-align: left; width: 500px")
+          i(style="float: left; padding-right: 20px").fa.fa-quote-left.fa-2x
+          | a graph database is any storage system that provides index-free adjacency
+          br
+        h3
+          em Anonymous Wikipedian
+
+      section.full-imgs
+        h2 Models and Relationships
+        br
+        br
+        br
+        table
+          thead
+            tr
+              th Model
+              th Example
+              th Fast for Relationships
+          tbody
+            tr
+              td Documental
+              td MongoDB
+              td(style="background-color: red")
+            tr
+              td Relational
+              td MySQL
+              td(style="background-color: yellow")
+            tr
+              td Graph
+              td OrientDB
+              td(style="background-color: green")
+
+        // A graph database is <em>fast</em> at traversing relations.
+
+      section.full-imgs
+        h2 The smallest possible graph
+        br
+        br
+        div
+          div(style="width: 40%; float: right; display: inline-block;")
+            ul.bullet
+              li(data-bespoke-bullet) "A" is called <em>subject</em>
+              li(data-bespoke-bullet) "B" is called <em>object</em>
+              li(data-bespoke-bullet) "A" and "B" are also called <em>vertexes</em>
+              li(data-bespoke-bullet) "C" is called <em>predicate</em>
+              li(data-bespoke-bullet) "C" is also called <em>arc</em>
+          div(style="width: 70%; display: inline-block; float: left; margin-left: -10%;")
+            img(src="/images/basic_graph.png")
+
+      section.full-imgs
+        h2 Query Examples
+        br
+        br
+        div
+          div(style="width: 40%; float: right; display: inline-block;")
+            ul.bullet
+              li(data-bespoke-bullet) Give me all the vertex that go from "A"
+              li(data-bespoke-bullet) Give me all the pairs connected by "C"
+              li(data-bespoke-bullet) Give me all the vertex that go to "B"
+              li(data-bespoke-bullet) Give me all the vertex that go to "B" <em>through "C"</em>
+              li(data-bespoke-bullet) ...
+          div(style="width: 70%; display: inline-block; float: left; margin-left: -10%;")
+            img(src="/images/basic_graph.png")
+
+      section.full-imgs
+        h2 Hexastore: the fastest data structure for a Graph
+        img(src="/images/hexastore.png")
+        .copyright
+          a(href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.140.8776&rep=rep1&type=pdf")
+            | Weiss et al.,
+            em "Hexastore: Sextuple Indexing for Semantic Web Data Management"
 
       section
         h2 How to use LevelUp to build a Graph Database
@@ -518,70 +585,6 @@ html
               "knows": [ { "name": "Daniele" }
                          { "name": "Lucio"   } ]
             })
-
-      section.full-imgs
-        h2 Linked Open Data
-        h3 What does that mean?
-
-      section.full-imgs
-        h2 Is your data accessible?
-        img(src='images/walledgarden.png')
-        .copyright
-          p David Simonds, The Economist
-
-      section.full-imgs
-        h2 Linked Open Data Cloud
-        img(src='images/lod-cloud.png')
-        .copyright
-          p Linking Open Data cloud diagram, by Richard Cyganiak and Anja Jentzsch.&nbsp;
-            a(href='http://lod-cloud.net/') http://lod-cloud.net/
-
-      section
-        h2 Our Dataset
-        br
-        pre
-          code(data-bespoke-autorun)#dataset.language-javascript.
-            @prefix c: &lt;http://example.org/cartoons#&gt;.
-            c:Tom   a c:Cat.
-            c:Jerry a c:Mouse;
-                    c:smarterThan c:Tom;
-                    c:place "fantasy".
-
-        br
-        h3 That has id '#dataset'
-
-      section
-        h2 Importing a Dataset
-
-        pre
-          code(data-bespoke-autorun).language-javascript.
-            var graph = n3(levelgraph("n3"));
-            var dataset = document.querySelector("#dataset");
-
-            graph.n3.put(dataset.innerText, function() {
-              alert("import completed!")
-
-              var stream = graph.getStream({})
-
-              stream.on('data', function(triple) {
-                alert(JSON.stringify(triple))
-              })
-            });
-
-      section
-        h2 Importing a Dataset with Streams
-
-        pre
-          code.language-javascript.
-            var graph = n3(levelgraph('n3'));
-            var fs = require("fs");
-
-            var stream = fs.createReadStream("./triples.n3")
-                           .pipe(graph.n3.putStream());
-
-            stream.on("finish", function() {
-              console.log("Import completed");
-            });
 
       section.full-imgs
         h2 LevelGraph
