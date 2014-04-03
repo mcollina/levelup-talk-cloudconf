@@ -1,4 +1,5 @@
-# How to Cook a Graph Database in a Night
+# Build your own database with LevelDB and Node.js
+
 > A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation
 
 Go check out [LevelGraph](http://levelgraph.io)!
