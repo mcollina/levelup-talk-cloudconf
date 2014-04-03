@@ -226,7 +226,7 @@ li.bespoke-bullet-inactive {
   border-radius: 0 4px 4px 0;
 }
 .cooking {
-  background-image: url("/images/cooking.jpg");
+  background-image: url("../images/cooking.jpg");
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%;
@@ -239,7 +239,7 @@ li.bespoke-bullet-inactive {
   color: #fff;
 }
 .consultant {
-  background-image: url("/images/consultant.jpg");
+  background-image: url("../images/consultant.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -252,7 +252,7 @@ li.bespoke-bullet-inactive {
   color: #fff;
 }
 .history {
-  background-image: url("/images/history.jpg");
+  background-image: url("../images/history.jpg");
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%;
@@ -277,7 +277,7 @@ li.bespoke-bullet-inactive {
   color: #fff;
 }
 .tirant {
-  background-image: url("/images/tirant.jpg");
+  background-image: url("../images/tirant.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -292,7 +292,7 @@ li.bespoke-bullet-inactive {
   color: #fff;
 }
 .levelmeup .bespoke-slide {
-  background-image: url("/images/levelmeup.png");
+  background-image: url("../images/levelmeup.png");
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;

@@ -7890,9 +7890,7 @@ function isBuffer (o) {
     || /\[object (.+Array|Array.+)\]/.test(Object.prototype.toString.call(o));
 }
 
-},{"buffer":7}],"levelgraph-n3":[function(require,module,exports){
-module.exports=require('R2lLaA');
-},{}],"R2lLaA":[function(require,module,exports){
+},{"buffer":7}],"R2lLaA":[function(require,module,exports){
 
 var n3 = require("n3")
   , concat = require("concat-stream");
@@ -7991,7 +7989,9 @@ function wrapCallback(method) {
 
 module.exports = levelgraphN3;
 
-},{"concat-stream":36,"n3":39}],36:[function(require,module,exports){
+},{"concat-stream":36,"n3":39}],"levelgraph-n3":[function(require,module,exports){
+module.exports=require('R2lLaA');
+},{}],36:[function(require,module,exports){
 var Buffer=require("__browserify_Buffer");var Writable = require('readable-stream').Writable
 var inherits = require('inherits')
 var TA = require('typedarray')
@@ -12259,9 +12259,7 @@ JoinStream.prototype._transform = function transform(solution, encoding, done) {
 
 module.exports = JoinStream;
 
-},{"./utilities":64,"./variable":65,"readable-stream":74}],"levelgraph":[function(require,module,exports){
-module.exports=require('HGceAa');
-},{}],"HGceAa":[function(require,module,exports){
+},{"./utilities":64,"./variable":65,"readable-stream":74}],"HGceAa":[function(require,module,exports){
 var process=require("__browserify_process");
 var filterStream = require('./filterstream')
   , materializer = require('./materializerstream')
@@ -12469,7 +12467,9 @@ doActionStream = function(type, leveldb) {
   };
 };
 
-},{"./filterstream":55,"./getdb":56,"./materializerstream":60,"./navigator":61,"./queryplanner":62,"./utilities":64,"./variable":65,"./writestream":66,"__browserify_process":6,"level-writestream":2,"levelup":"Qh7AIe","readable-stream":74,"xtend":76}],60:[function(require,module,exports){
+},{"./filterstream":55,"./getdb":56,"./materializerstream":60,"./navigator":61,"./queryplanner":62,"./utilities":64,"./variable":65,"./writestream":66,"__browserify_process":6,"level-writestream":2,"levelup":"Qh7AIe","readable-stream":74,"xtend":76}],"levelgraph":[function(require,module,exports){
+module.exports=require('HGceAa');
+},{}],60:[function(require,module,exports){
 
 var Transform = require('readable-stream').Transform
   , materializer = require('./utilities').materializer;
@@ -15964,7 +15964,9 @@ module.exports = {
   , NotFoundError       : NotFoundError
   , EncodingError       : createError('EncodingError', LevelUPError)
 }
-},{"errno":120}],"Qh7AIe":[function(require,module,exports){
+},{"errno":120}],"levelup":[function(require,module,exports){
+module.exports=require('Qh7AIe');
+},{}],"Qh7AIe":[function(require,module,exports){
 var process=require("__browserify_process");/* Copyright (c) 2012-2013 LevelUP contributors
  * See list at <https://github.com/rvagg/node-levelup#contributing>
  * MIT +no-false-attribs License
@@ -16401,9 +16403,7 @@ module.exports.destroy = utilStatic('destroy')
 // DEPRECATED: prefer accessing LevelDOWN for this: require('leveldown').repair()
 module.exports.repair  = utilStatic('repair')
 
-},{"./batch":81,"./errors":82,"./read-stream":85,"./util":86,"./write-stream":87,"__browserify_process":6,"deferred-leveldown":102,"events":3,"prr":121,"util":19,"xtend":129}],"levelup":[function(require,module,exports){
-module.exports=require('Qh7AIe');
-},{}],85:[function(require,module,exports){
+},{"./batch":81,"./errors":82,"./read-stream":85,"./util":86,"./write-stream":87,"__browserify_process":6,"deferred-leveldown":102,"events":3,"prr":121,"util":19,"xtend":129}],85:[function(require,module,exports){
 /* Copyright (c) 2012-2013 LevelUP contributors
  * See list at <https://github.com/rvagg/node-levelup#contributing>
  * MIT +no-false-attribs License <https://github.com/rvagg/node-levelup/blob/master/LICENSE>
